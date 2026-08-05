@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const NAV_ITEMS = [
+const NAV_ITEMS: { href: string; label: string }[] = [
   // { href: "/", label: "Home" },
   // { href: "/about", label: "About" },
   // { href: "/brands", label: "Brands" },
-] as const;
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
