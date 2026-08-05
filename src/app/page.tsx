@@ -39,11 +39,11 @@ export default function HomePage() {
           </div>
         </div>
       </ScrollGrowCircle>
-      <section className="relative flex flex-1 flex-col overflow-hidden">
+      <section className="relative flex flex-1 flex-col overflow-hidden bg-[#000]">
         <div className="absolute inset-0 scale-110" />
         <div className={'relative z-10 w-full min-h-screen flex justify-center items-center'}>
           <FadeIn>
-            <p className={'text-[72px] leading-[1.2] font-semibold text-center'}>매일의 건강을<br/>
+            <p className={'text-[72px] leading-[1.2] font-semibold text-center text-white'}>매일의 건강을<br/>
               브랜드로 설계합니다.</p>
           </FadeIn>
         </div>

@@ -167,7 +167,7 @@ export default function ScrollGrowCircle({
         >
           <div ref={imageRef} className="absolute inset-0" style={{ opacity: 0 }}>
             <Image
-              src="/images/home/office.jpg"
+              src="/images/home/bg-2.png"
               alt=""
               fill
               sizes="100vw"
