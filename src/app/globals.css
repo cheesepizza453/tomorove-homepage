@@ -27,6 +27,10 @@ body {
   animation: brand-marquee 28s linear infinite;
 }
 
+.animate-brand-marquee:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-brand-marquee {
     animation: none;
