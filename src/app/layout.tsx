@@ -24,7 +24,7 @@ const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 export const metadata: Metadata = {
   // TODO: 실제 메타데이터로 교체
   title: "TOMOROVE",
-  description: "TODO: 사이트 설명",
+  description: "투모로브",
 };
 
 export default function RootLayout({
