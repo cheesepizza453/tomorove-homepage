@@ -8,11 +8,13 @@ const BRANDS = [
   { name: "LIVDERM", url: "https://livderm.kr", description: "눈가 고민의 유일한 해답, 리브덤" },
   { name: "KiDZ:DAM", url: "https://kidzdam.kr", description: "아이에게 필요한 것들만 담았습니다." },
   { name: "MOYOKU", url: "https://moyoku.kr/", description: "일본 바디케어 루틴" },
+  { name: "KIDZPLAN", url: "https://kidzplan.kr", description: "성장기 어린이들을 위한 영양계획" },
+  { name: "Eli Korea", url: "https://elikorea.kr", description: "지중해식 식탁에서 시작된 식후 루틴" },
 ];
 
 export default function BrandMarquee() {
   return (
-    <section className="flex min-h-screen w-full items-center overflow-hidden bg-white py-24">
+    <section className="mt-[100px] md:mt-0 flex flex-col md:flex-row min-h-screen w-full items-start md:items-center overflow-hidden bg-white py-24">
       <div className="shrink-0 pl-[max(1.5rem,calc((100vw-1440px)/2))]">
         <FadeIn>
           <p className="whitespace-nowrap text-[36px] font-bold leading-[1.3] sm:text-[44px] lg:text-[52px]">
@@ -23,7 +25,7 @@ export default function BrandMarquee() {
         </FadeIn>
       </div>
 
-      <div className="ml-12 min-w-0 flex-1 overflow-hidden lg:ml-20">
+      <div className="mt-[50px] md:mt-0 ml-0 md:ml-12 min-w-0 flex-1 overflow-hidden lg:ml-20">
         <div className="flex w-max animate-brand-marquee gap-6">
           {[...BRANDS, ...BRANDS].map((brand, i) => (
             <a

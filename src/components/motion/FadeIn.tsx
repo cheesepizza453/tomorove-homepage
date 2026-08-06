@@ -5,9 +5,10 @@ import { type ReactNode, useEffect, useRef } from "react";
 interface FadeInProps {
   children: ReactNode;
   className?: string;
+  delay?: number;
 }
 
-export default function FadeIn({ children, className = "" }: FadeInProps) {
+export default function FadeIn({ children, className = "", delay = 0 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export default function FadeIn({ children, className = "" }: FadeInProps) {
       style={{
         opacity: 0,
         transform: "translateY(16px)",
-        transition: "opacity 0.3s ease-out, transform 0.3s ease-out",
+        transition: `opacity 0.3s ease-out ${delay}ms, transform 0.3s ease-out ${delay}ms`,
       }}
     >
       {children}

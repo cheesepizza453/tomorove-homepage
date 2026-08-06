@@ -27,8 +27,7 @@ export default function Header() {
         isScrolled ? "bg-white/70 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[65px] max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* TODO: 로고 이미지 교체 */}
+      <div className="mx-auto flex h-[65px] max-w-[1440px] items-center justify-between px-[20px]">
         <Link href="/" className="text-lg font-bold">
           <Image src="/images/home/logo.png" alt="TOMOROVE" width={120} height={32} />
         </Link>

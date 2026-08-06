@@ -5,19 +5,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-// TODO: Pretendard 폰트 파일을 public/fonts/에 추가한 뒤 아래 주석을 해제하고 적용
-// 다운로드: https://github.com/orioncactus/pretendard
-// import localFont from "next/font/local";
-// const pretendard = localFont({
-//   src: "../../public/fonts/PretendardVariable.subset.woff2",
-//   weight: "100 900",
-//   variable: "--font-pretendard",
-//   display: "swap",
-//   fallback: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
-//   adjustFontFallback: false,
-// });
-// html className에 pretendard.variable 추가할 것
-
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
