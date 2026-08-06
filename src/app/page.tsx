@@ -40,16 +40,16 @@ export default function HomePage() {
         heading={
           <>
           <FadeIn>
-            <p className={'md:hidden text-[42px] md:text-[72px] leading-[1.2] font-semibold text-center'}>TOMOROVE는</p>
+            <p className={'md:hidden text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>TOMOROVE는</p>
           </FadeIn>
           <FadeIn delay={300}>
-            <p className={'md:hidden text-[42px] md:text-[72px] leading-[1.2] font-semibold text-center'}>사람들의 일상을 바꾸는</p>
+            <p className={'md:hidden text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>사람들의 일상을 바꾸는</p>
           </FadeIn>
           <FadeIn delay={600}>
-            <p className={'md:hidden text-[42px] md:text-[72px] leading-[1.2] font-semibold text-center'}>브랜드 컴퍼니입니다.</p>
+            <p className={'md:hidden text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>브랜드 컴퍼니입니다.</p>
           </FadeIn>
           <FadeIn>
-            <p className={'hidden md:block text-[42px] md:text-[72px] leading-[1.2] font-semibold text-center'}>TOMOROVE는 <br/>사람들의 일상을 바꾸는<br/>
+            <p className={'hidden md:block text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>TOMOROVE는 <br/>사람들의 일상을 바꾸는<br/>
 브랜드 컴퍼니입니다.</p>
           </FadeIn>
           </>
