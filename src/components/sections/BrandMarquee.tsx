@@ -1,13 +1,13 @@
 import FadeIn from "@/components/motion/FadeIn";
 
 const BRANDS = [
-  { name: "DoDit", url: "https://dodit.kr" },
-  { name: "BeneKid", url: "https://benekid.kr" },
-  { name: "Oroshe", url: "https://oroshe.kr" },
-  { name: "DailyPlan", url: "https://dailyplan.kr" },
-  { name: "LIVDERM", url: "https://livderm.kr" },
-  { name: "KiDZ:DAM", url: "https://kidzdam.kr" },
-  { name: "MOYOKU", url: "https://moyoku.kr/" },
+  { name: "DoDit", url: "https://dodit.kr", description: "여성들의 다이어트 파트너" },
+  { name: "BeneKid", url: "https://benekid.kr", description: "성장기 자녀를 위한 프리미엄 뉴트리션" },
+  { name: "Oroshe", url: "https://oroshe.kr", description: "여성을 위한 균형을 디자인합니다." },
+  { name: "DailyPlan", url: "https://dailyplan.kr", description: "성장기 아이들의 든든한 하루" },
+  { name: "LIVDERM", url: "https://livderm.kr", description: "눈가 고민의 유일한 해답, 리브덤" },
+  { name: "KiDZ:DAM", url: "https://kidzdam.kr", description: "아이에게 필요한 것들만 담았습니다." },
+  { name: "MOYOKU", url: "https://moyoku.kr/", description: "일본 바디케어 루틴" },
 ];
 
 export default function BrandMarquee() {
@@ -41,8 +41,13 @@ export default function BrandMarquee() {
                 />
               </figure>
 
-              <div className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-2xl font-regular text-white">{brand.name}</span>
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/45 px-6 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <img
+                  src={`/images/home/prod-logo-${(i % BRANDS.length) + 1}.png`}
+                  alt={brand.name}
+                  className="h-10 w-auto object-contain"
+                />
+                <span className="text-sm text-white">{brand.description}</span>
               </div>
             </a>
           ))}
