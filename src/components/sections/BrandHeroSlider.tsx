@@ -30,19 +30,27 @@ const SLIDES: Slide[] = [
 
 export default function BrandHeroSlider() {
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    if (SLIDES.length <= 1) return;
+    if (SLIDES.length <= 1 || isPaused) return;
 
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % SLIDES.length);
     }, SLIDE_INTERVAL);
 
     return () => clearInterval(timer);
-  }, [current]);
+  }, [isPaused]);
 
   return (
-    <div className="relative sm:h-[570px] w-full overflow-hidden">
+    <section
+      className="relative h-[420px] w-full overflow-hidden sm:h-[570px]"
+      aria-label="주요 브랜드"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={() => setIsPaused(false)}
+    >
       {SLIDES.map((slide, i) => (
         <div
           key={slide.slug}
@@ -55,12 +63,12 @@ export default function BrandHeroSlider() {
             src={slide.image}
             alt={slide.heading.join(" ")}
             fill
-            className="object-cover"
+            className="object-cover object-[77%_center] sm:object-center"
             priority={i === 0}
           />
           <div className="absolute inset-0 bg-black/30" />
 
-          <div className="absolute max-w-[1440px] w-full mx-auto inset-0 flex flex-col items-start justify-center gap-6 text-white">
+          <div className="absolute inset-0 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-center gap-6 px-6 text-white sm:px-10 lg:px-12">
             <p className="text-[28px] font-bold leading-[1.4] sm:text-[36px]">
               {slide.heading.map((line, idx) => (
                 <span key={idx}>
@@ -80,20 +88,25 @@ export default function BrandHeroSlider() {
       ))}
 
       {SLIDES.length > 1 && (
-        <div className="absolute bottom-6 right-6 flex gap-2">
+        <div className="absolute bottom-3 right-3 flex sm:bottom-4 sm:right-4">
           {SLIDES.map((_, i) => (
             <button
               key={i}
               type="button"
               aria-label={`${i + 1}번 슬라이드`}
+              aria-current={i === current ? "true" : undefined}
               onClick={() => setCurrent(i)}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                i === current ? "bg-white" : "bg-white/40"
-              }`}
-            />
+              className="flex h-10 w-10 items-center justify-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <span
+                className={`h-2 w-2 rounded-full transition-colors ${
+                  i === current ? "bg-white" : "bg-white/40"
+                }`}
+              />
+            </button>
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 }

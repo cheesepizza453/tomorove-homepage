@@ -42,21 +42,21 @@ export default function AboutPage() {
       </div>
 
       <div
-        className={'relative w-full min-h-screen flex justify-between justify-center items-center flex-col md:flex-row px-[30px] md:px-[240px]'}>
-        <div className={'w-full md:w-half flex-1 mt-[60px] md:mt-0'}>
+        className={'relative flex min-h-screen w-full flex-col items-center justify-center px-[30px] py-16 md:flex-row md:justify-between md:px-[240px] md:py-0'}>
+        <div className={'mt-[60px] w-full flex-none md:mt-0 md:w-half md:flex-1'}>
           <FadeIn><h5 className={'font-bold text-[40px] md:text-[60px]'}>Brand-first</h5></FadeIn>
           <FadeIn delay={100}><p className={'font-bold text-[16px] md:text-[25px] leading-0'}>브랜드 우선</p></FadeIn>
           <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] mt-[40px] leading-[1.2]'}>단기 성과보다<br/>오래
             남는 브랜드를 우선합니다.</p>
           </FadeIn>
         </div>
-        <div className={'relative md:w-half flex-1 flex md:justify-end md:items-center'}>
+        <div className={'relative mt-12 h-[320px] w-full flex-none md:mt-0 md:flex md:h-auto md:w-half md:flex-1 md:items-center md:justify-end'}>
           <div>
-            <FadeIn>
+            <FadeIn className="absolute inset-0 md:static">
               <svg
                 viewBox="0 0 300 500"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-[123px] md:w-[247px] h-[224px] md:h-[448px] absolute top-[0] right-[0px] md:right-[220px]"
+                className="absolute bottom-[20px] left-1/2 h-[224px] w-[123px] -translate-x-1/2 md:top-0 md:right-[220px] md:bottom-auto md:left-auto md:h-[448px] md:w-[247px] md:translate-x-0"
               >
                 <path
                   d="M 0 500 L 0 150 A 150 150 0 0 1 300 150 L 300 500 Z"
@@ -64,20 +64,20 @@ export default function AboutPage() {
                 />
               </svg>
             </FadeIn>
-            <FadeIn delay={100}>
+            <FadeIn className="absolute inset-0 md:static" delay={100}>
               <svg
                 viewBox="0 0 300 300"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-[130px] md:w-[260px] h-[130px] md:h-[260px] absolute top-[-120px] md:top-[-180px] right-[-90px] md:right-0"
+                className="absolute top-[10px] left-1/2 ml-[25px] h-[130px] w-[130px] md:top-[-180px] md:right-0 md:left-auto md:ml-0 md:h-[260px] md:w-[260px]"
               >
                 <circle cx="150" cy="150" r="150" fill="#3F4348"/>
               </svg>
             </FadeIn>
-            <FadeIn delay={200}>
+            <FadeIn className="absolute inset-0 md:static" delay={200}>
               <svg
                 viewBox="0 0 300 150"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-[157px] md:w-[315px] h-[95px] md:h-[190px] absolute top-[120px] md:top-[240px] right-[-110px] md:right-[20px]"
+                className="absolute bottom-[10px] left-1/2 ml-[25px] h-[95px] w-[157px] md:top-[240px] md:right-[20px] md:bottom-auto md:left-auto md:ml-0 md:h-[190px] md:w-[315px]"
               >
                 <path
                   d="M 0 0 H 300 A 150 150 0 0 1 0 0 Z"
@@ -90,32 +90,32 @@ export default function AboutPage() {
       </div>
 
       <div
-        className={'relative w-full min-h-screen flex justify-between justify-center md:items-center flex-col-reverse md:flex-row px-[30px] md:px-[240px]'}>
-        <div className={'relative md:w-half md:min-h-screen flex-1'}>
+        className={'relative flex min-h-screen w-full flex-col-reverse justify-center px-[30px] py-16 md:flex-row md:items-center md:justify-between md:px-[240px] md:py-0'}>
+        <div className={'relative mt-12 h-[320px] w-full flex-none md:mt-0 md:min-h-screen md:w-half md:flex-1'}>
           <div>
-            <FadeIn className={'relative min-h-screen'}>
+            <FadeIn className="absolute inset-0 md:relative md:min-h-screen">
               <svg
                 viewBox="0 0 220 300"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute left-[55px] md:left-[10px] md:left-0 bottom-[100px] md:bottom-0 w-[75px] md:w-[150px] h-[85px] md:h-[170px]"
+                className="absolute bottom-[20px] left-1/2 ml-[-120px] h-[85px] w-[75px] md:bottom-0 md:left-0 md:ml-0 md:h-[170px] md:w-[150px]"
               >
                 <rect x="0" y="0" width="220" height="300" fill="#3F4248"/>
               </svg>
             </FadeIn>
-            <FadeIn delay={100}>
+            <FadeIn className="absolute inset-0 md:static" delay={100}>
               <svg
                 viewBox="0 0 220 550"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute left-[135px] md:left-[-35px] md:left-[190px] bottom-[100px] md:bottom-0 w-[75px] md:w-[150px] h-[160px] md:h-[320px]"
+                className="absolute bottom-[20px] left-1/2 ml-[-37px] h-[160px] w-[75px] md:bottom-0 md:left-[190px] md:ml-0 md:h-[320px] md:w-[150px]"
               >
                 <rect x="0" y="0" width="220" height="550" fill="#3F4248"/>
               </svg>
             </FadeIn>
-            <FadeIn delay={200}>
+            <FadeIn className="absolute inset-0 md:static" delay={200}>
               <svg
                 viewBox="0 0 220 800"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute left-[220px] md:left-[50px] md:left-[380px] bottom-[100px] md:bottom-0 w-[75px] md:w-[150px] h-[245px] md:h-[490px]"
+                className="absolute bottom-[20px] left-1/2 ml-[46px] h-[245px] w-[75px] md:bottom-0 md:left-[380px] md:ml-0 md:h-[490px] md:w-[150px]"
               >
                 <rect x="0" y="0" width="220" height="800" fill="#F1661E"/>
               </svg>
@@ -132,8 +132,8 @@ export default function AboutPage() {
       </div>
 
       <div
-        className={'relative w-full min-h-screen flex justify-between justify-center md:items-center flex-col md:flex-row px-[30px] md:px-[240px]'}>
-        <div className={'md:w-half flex-1 mt-[60px] md:mt-0'}>
+        className={'relative flex min-h-screen w-full flex-col justify-center px-[30px] py-16 md:flex-row md:items-center md:justify-between md:px-[240px] md:py-0'}>
+        <div className={'mt-[60px] w-full flex-none md:mt-0 md:w-half md:flex-1'}>
           <FadeIn><h5 className={'font-bold text-[40px] md:text-[60px]'}>Fast & Careful</h5></FadeIn>
           <FadeIn delay={100}><p className={'font-bold text-[16px] md:text-[25px] leading-0'}>신속함과 세심함</p></FadeIn>
           <FadeIn delay={200}><p
@@ -144,22 +144,22 @@ export default function AboutPage() {
             챙깁니다.</p>
           </FadeIn>
         </div>
-        <div className={'relative w-half flex-1 flex justify-end items-center md:mt-[-300px]'}>
+        <div className={'relative mt-12 h-[260px] w-full flex-none md:mt-[-300px] md:h-auto md:w-half md:flex-1'}>
           <div>
-            <FadeIn className={'relative sm:min-h-screen'}>
+            <FadeIn className="absolute inset-0 md:relative md:min-h-screen">
               <svg
                 viewBox="0 0 480 480"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute bottom-[-50px] md:bottom-[0] left-[-260px] md:left-[-110px] md:left-[-550px] w-[150px] md:w-[300px] h-[150px]md:h-[300px]"
+                className="absolute bottom-[20px] left-1/2 ml-[-100px] h-[150px] w-[150px] md:bottom-0 md:left-[60px] md:ml-0 md:h-[300px] md:w-[300px]"
               >
                 <polygon points="240,0 480,240 240,480 0,240" fill="#F1661E"/>
               </svg>
             </FadeIn>
-            <FadeIn delay={100}>
+            <FadeIn className="absolute inset-0 md:static" delay={100}>
               <svg
                 viewBox="0 0 406 406"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute bottom-[-50px] md:bottom-[0] left-[-150px] md:left-[-300px] w-[150px] md:w-[300px] h-[150px] md:h-[300px]"
+                className="absolute bottom-[20px] left-1/2 ml-[-10px] h-[150px] w-[150px] md:bottom-0 md:left-[300px] md:ml-0 md:h-[300px] md:w-[300px]"
               >
                 <circle cx="203" cy="203" r="200" fill="#3F4248"/>
               </svg>
@@ -204,7 +204,12 @@ export default function AboutPage() {
           </FadeIn>
           <FadeIn>
             <div className="flex justify-center mt-[50px]">
-              <Link className="text-black text-[20px] font-semibold text-center inline-block border border-black px-[30px] py-[15px] rounded-[40px]" href="/brands">브랜드 바로가기</Link>
+              <Link
+                className="inline-block rounded-[40px] border border-black px-[30px] py-[15px] text-center text-[20px] font-semibold text-black transition-colors duration-300 ease-out hover:bg-black hover:text-white focus-visible:bg-black focus-visible:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+                href="/brands"
+              >
+                브랜드 바로가기
+              </Link>
             </div>
           </FadeIn>
           
@@ -219,6 +224,17 @@ export default function AboutPage() {
           <FadeIn delay={400}>
             <p>궁금하신가요?</p>
           </FadeIn>
+          <FadeIn>
+            <div className="flex justify-center mt-[30px]">
+              <Link
+                className="inline-block rounded-[40px] border border-black px-[30px] py-[15px] text-center text-[16px] font-semibold text-black transition-colors duration-300 ease-out hover:bg-black hover:text-white focus-visible:bg-black focus-visible:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+                href="/brands"
+              >
+                브랜드 바로가기
+              </Link>
+            </div>
+          </FadeIn>
+          
         </div>
       </div>
 

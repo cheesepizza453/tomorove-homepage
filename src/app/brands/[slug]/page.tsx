@@ -31,7 +31,7 @@ export default async function BrandDetailPage({ params }: BrandDetailPageProps) 
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/50" />
 
         <div className="h-full flex flex-col justify-center items-center relative mx-auto max-w-3xl px-6 sm:py-24 text-center text-white">
           <figure className="w-[34vw] sm:w-[300px] mx-auto">

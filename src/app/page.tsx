@@ -71,8 +71,13 @@ export default function HomePage() {
         <FadeIn>
           <p className={'text-[42px] md:text-[72px] leading-[1.2] font-semibold text-center text-white'}>매일의 건강을<br/>
             브랜드로 설계합니다.</p>
-            <div className="flex justify-center mt-[50px]">
-            <Link className="text-white text-[20px] font-semibold text-center inline-block border border-white px-[30px] py-[15px] rounded-[40px]" href="/brands">브랜드 바로가기</Link>
+            <div className="flex justify-center mt-[30px] sm:mt-[50px]">
+            <Link
+              className="inline-block rounded-[40px] border border-white px-[30px] py-[15px] text-center text-[16px] sm:text-[20px] font-semibold text-white transition-colors duration-300 ease-out hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              href="/brands"
+            >
+              브랜드 바로가기
+            </Link>
             </div>
         </FadeIn>
       </ScrollBlurReveal>
