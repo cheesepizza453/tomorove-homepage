@@ -146,7 +146,7 @@ export default function AboutPage() {
         </div>
         <div className={'relative w-half flex-1 flex justify-end items-center md:mt-[-300px]'}>
           <div>
-            <FadeIn className={'relative min-h-screen'}>
+            <FadeIn className={'relative sm:min-h-screen'}>
               <svg
                 viewBox="0 0 480 480"
                 xmlns="http://www.w3.org/2000/svg"

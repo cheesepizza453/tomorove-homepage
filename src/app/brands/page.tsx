@@ -23,12 +23,12 @@ export default function BrandsPage() {
     <main className='flex flex-col w-full mt-[65px] mb-[120px]'>
       <BrandHeroSlider />
       <div className='sm:max-w-[1400px] sm:w-full sm:mx-auto'>
-      <h2 className='sm:text-[60px] text-center sm:mt-[80px] font-extrabold'>BRANDS</h2>
+      <h2 className='text-[40px] sm:text-[60px] text-center sm:mt-[80px] font-extrabold text-[#222]'>Brands</h2>
       </div>
-      <ul className="sm:mt-[40px] sm:max-w-[1440px] w-full mx-auto grid grid-cols-3 sm:gap-[50px] ">
+      <ul className="mt-[40px] sm:mt-[40px] sm:max-w-[1440px] w-full mx-auto grid sm:grid-cols-3 sm:gap-[50px] ">
         {brandLogos.map((slug) => (
           <li key={slug} className="group ">
-            <Link className="flex items-center justify-center h-[250px] px-[120px] border border-black transition-colors hover:bg-black" href={`/brands/${slug}`}>
+            <Link className="flex items-center justify-center h-[250px] sm:px-[120px] border border-[#ddd] rounded-[6px] transition-colors hover:bg-[#222]" href={`/brands/${slug}`}>
               <figure className="relative h-[50px] w-[150px]">
                 <Image
                   src={`/images/brands/black_${slug}.png`}

@@ -33,7 +33,7 @@ export default async function BrandDetailPage({ params }: BrandDetailPageProps) 
         />
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="h-full flex flex-col justify-center items-center relative mx-auto max-w-3xl px-6 py-24 text-center text-white">
+        <div className="h-full flex flex-col justify-center items-center relative mx-auto max-w-3xl px-6 sm:py-24 text-center text-white">
           <figure className="w-[34vw] sm:w-[300px] mx-auto">
             <Image
               src={`/images/brands/white_${brand.slug}.png`}
@@ -44,7 +44,7 @@ export default async function BrandDetailPage({ params }: BrandDetailPageProps) 
             />
           </figure>
 
-          <h1 className="mt-[16px] whitespace-pre-line text-[28px] font-light leading-[1.4] sm:text-[30px]">
+          <h1 className="mt-[16px] whitespace-pre-line text-[18px] sm:text-[28px] font-light leading-[1.4] sm:text-[30px]">
             {brand.tagline}
           </h1>
 
@@ -66,13 +66,13 @@ export default async function BrandDetailPage({ params }: BrandDetailPageProps) 
             href={brand.storeUrl}
             brandSlug={brand.slug}
             position="brand_detail"
-            className="mt-[80px] self-center inline-block bg-black text-white px-8 py-3 text-center sm:text-[16px] transition-colors hover:bg-[#333]"
+            className="mt-[80px] self-center inline-block bg-[#222] text-white px-8 py-3 text-center sm:text-[16px] transition-colors hover:bg-[#333] rounded-[6px]"
           >
             브랜드 스토어 바로가기
       </StoreLink>
 
       {brand.products && brand.products.length > 0 && (
-        <div className="mx-auto mt-[200px] w-full max-w-[1440px] flex justify-center gap-[20px]">
+        <div className="mx-auto mt-[200px] w-full max-w-[1440px] flex flex-col items-center sm:flex-row justify-center gap-[40px] sm:gap-[20px]">
           {brand.products.map((product, i) => (
             <StoreLink
               key={i}
@@ -80,7 +80,7 @@ export default async function BrandDetailPage({ params }: BrandDetailPageProps) 
               brandSlug={brand.slug}
               productId={`product-${i + 1}`}
               position="brand_detail_product"
-              className="group relative block aspect-square overflow-hidden w-[350px]"
+              className="group relative block aspect-square overflow-hidden w-[80vw] sm:w-[350px] rounded-[6px] overflow-hidden "
             >
               <Image
                 src={product.image}

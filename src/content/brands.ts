@@ -53,7 +53,7 @@ export const brands: Brand[] = [
     name: "듀오라",
     nameEn: "Dewora",
     category: "TODO",
-    tagline: "사막에서도 마르지 않는 이유",
+    tagline: "사막에서 찾은 수분 저장의 힘",
     story: [
       "메마른 사막에서도 생명은 스스로 수분을 지켜냅니다.",
       "DEWORA는 그 놀라운 생명력에서 보습의 본질을 바라보았습니다.",
@@ -63,12 +63,11 @@ export const brands: Brand[] = [
     ],
     heroImage: "/images/brands/dewora_hero.jpg",
     cardImage: "/images/brands/dewora-card.jpg",
-    storeUrl: "https://example.com/store-dewora",
-    // TODO: 실제 제품 이미지/링크로 교체
+    storeUrl: "https://dewora.kr/",
     products: [
-      { image: "/images/brands/dewora_prod_1.jpg", link: "https://example.com/store-dewora/product-1" },
-      { image: "/images/brands/dewora_prod_2.jpg", link: "https://example.com/store-dewora/product-2" },
-      { image: "/images/brands/dewora_prod_3.jpg", link: "https://example.com/store-dewora/product-3" },
+      { image: "/images/brands/dewora_prod_1.jpg", link: "https://dewora.kr/shop_view/?idx=3" },
+      { image: "/images/brands/dewora_prod_2.jpg", link: "https://dewora.kr/shop_view/?idx=6" },
+      { image: "/images/brands/dewora_prod_3.jpg", link: "https://dewora.kr/shop_view/?idx=4" },
     ],
     isActive: true,
   },
