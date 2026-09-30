@@ -17,6 +17,7 @@ interface ScrollGrowCircleProps {
 // PHASE2_END ~ 1: 사진으로 페이드인 + 라운드 제거 + 화면 전체를 덮도록 확대
 const PHASE1_END = 0.3;
 const PHASE2_END = 0.6;
+const CIRCLE_FADE_END = 0.2;
 
 // heading이 사라지는 데 걸리는 진행도(0~REST_FADE_END). 다 사라진 뒤에는 원이
 // heading과 자리를 나눠 갖지 않고 화면 정중앙에 오도록 오프셋을 0으로 만든다.
@@ -96,6 +97,7 @@ export default function ScrollGrowCircle({
     };
 
     if (prefersReducedMotion) {
+      circle.style.opacity = "1";
       applyShape(1);
       applyOffsets(1);
       content.style.opacity = "1";
@@ -112,6 +114,7 @@ export default function ScrollGrowCircle({
       const progress =
         scrollRange > 0 ? Math.min(Math.max(-rect.top / scrollRange, 0), 1) : 0;
 
+      circle.style.opacity = String(Math.min(progress / CIRCLE_FADE_END, 1));
       applyShape(progress);
 
       const headingProgress = Math.min(Math.max(progress / REST_FADE_END, 0), 1);
@@ -161,8 +164,9 @@ export default function ScrollGrowCircle({
             width: baseSize,
             height: baseSize,
             borderRadius: baseSize / 2,
+            opacity: 0,
             transform: `translate(-50%, calc(-50% + ${REST_OFFSET}px))`,
-            willChange: "width, height, border-radius, transform",
+            willChange: "width, height, border-radius, transform, opacity",
           }}
         >
           <div ref={imageRef} className="absolute inset-0" style={{ opacity: 0 }}>

@@ -11,7 +11,7 @@ const brandLogos = [
   // "elikorea",
   "kidzdam",
   "kidzplan",
-  "livature",
+  //"livature",
   "livderm",
   "moyoku",
   "oroshe",
@@ -20,7 +20,7 @@ const brandLogos = [
 
 export default function BrandsPage() {
   return (
-    <main className='flex flex-col w-full mt-[80px] mb-[120px]'>
+    <main className='flex flex-col w-full mt-[65px] mb-[120px]'>
       <BrandHeroSlider />
       <div className='sm:max-w-[1400px] sm:w-full sm:mx-auto'>
       <h2 className='sm:text-[60px] text-center sm:mt-[80px] font-extrabold'>BRANDS</h2>

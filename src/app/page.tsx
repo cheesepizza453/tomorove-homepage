@@ -2,6 +2,7 @@ import BrandMarquee from "@/components/sections/BrandMarquee";
 import ScrollGrowCircle from "@/components/motion/ScrollGrowCircle";
 import FadeIn from "@/components/motion/FadeIn";
 import ScrollBlurReveal from "@/components/motion/ScrollBlurReveal";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -70,6 +71,9 @@ export default function HomePage() {
         <FadeIn>
           <p className={'text-[42px] md:text-[72px] leading-[1.2] font-semibold text-center text-white'}>매일의 건강을<br/>
             브랜드로 설계합니다.</p>
+            <div className="flex justify-center mt-[30px]">
+            <Link className="text-white text-[20px] font-semibold text-center inline-block border border-white px-[30px] py-[15px] rounded-[6px]" href="/brands">브랜드 바로가기</Link>
+            </div>
         </FadeIn>
       </ScrollBlurReveal>
     </div>

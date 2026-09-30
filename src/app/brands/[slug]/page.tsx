@@ -44,7 +44,7 @@ export default async function BrandDetailPage({ params }: BrandDetailPageProps) 
             />
           </figure>
 
-          <h1 className="mt-[10px] text-[28px] font-light leading-[1.4] sm:text-[30px]">
+          <h1 className="mt-[16px] whitespace-pre-line text-[28px] font-light leading-[1.4] sm:text-[30px]">
             {brand.tagline}
           </h1>
 

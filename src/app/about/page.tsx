@@ -1,6 +1,7 @@
 import FadeIn from "@/components/motion/FadeIn";
 import ScrollSVGHighlight from "@/components/sections/ScrollSVGHighlight";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -45,7 +46,7 @@ export default function AboutPage() {
         <div className={'w-full md:w-half flex-1 mt-[60px] md:mt-0'}>
           <FadeIn><h5 className={'font-bold text-[40px] md:text-[60px]'}>Brand-first</h5></FadeIn>
           <FadeIn delay={100}><p className={'font-bold text-[16px] md:text-[25px] leading-0'}>브랜드 우선</p></FadeIn>
-          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] mt-[20px] leading-[1.2]'}>단기 성과보다<br/>오래
+          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] mt-[40px] leading-[1.2]'}>단기 성과보다<br/>오래
             남는 브랜드를 우선합니다.</p>
           </FadeIn>
         </div>
@@ -124,7 +125,7 @@ export default function AboutPage() {
         <div className={'mt-[60px] md:mt-[180px] md:ml-[300px] md:w-half flex-1'}>
           <FadeIn><h5 className={'font-bold text-[40px] md:text-[60px]'}>Data-driven</h5></FadeIn>
           <FadeIn delay={100}><p className={'font-bold text-[16px] md:text-[25px] leading-0'}>데이터 기반</p></FadeIn>
-          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] mt-[20px] leading-[1.2]'}>감이 아닌 숫자로
+          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] mt-[40px] leading-[1.2]'}>감이 아닌 숫자로
             말하고,<br/>데이터로 결정합니다.</p>
           </FadeIn>
         </div>
@@ -136,7 +137,7 @@ export default function AboutPage() {
           <FadeIn><h5 className={'font-bold text-[40px] md:text-[60px]'}>Fast & Careful</h5></FadeIn>
           <FadeIn delay={100}><p className={'font-bold text-[16px] md:text-[25px] leading-0'}>신속함과 세심함</p></FadeIn>
           <FadeIn delay={200}><p
-            className={'hidden md:block font-bold text-[26px] md:text-[40px] mt-[20px] leading-[1.2]'}>빠르게 움직이되, 세심하게
+            className={'hidden md:block font-bold text-[26px] md:text-[40px] mt-[40px] leading-[1.2]'}>빠르게 움직이되, 세심하게
             챙깁니다.</p></FadeIn>
           <FadeIn delay={200}><p
             className={'md:hidden font-bold text-[26px] md:text-[40px] mt-[20px] leading-[1.2]'}>빠르게 움직이되,<br/>세심하게
@@ -201,6 +202,12 @@ export default function AboutPage() {
           <FadeIn delay={300}>
             <p>궁금하신가요?</p>
           </FadeIn>
+          <FadeIn>
+            <div className="flex justify-center mt-[50px]">
+              <Link className="text-black text-[20px] font-semibold text-center inline-block border border-black px-[30px] py-[15px] rounded-[40px]" href="/brands">브랜드 바로가기</Link>
+            </div>
+          </FadeIn>
+          
         </div>
         <div className={'md:hidden text-[38px] md:text-[72px] leading-[1.2] font-semibold text-center'}>
           <FadeIn>
