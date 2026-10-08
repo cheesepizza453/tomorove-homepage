@@ -146,7 +146,7 @@ export default function ScrollGrowCircle({
 
   return (
     <div ref={trackRef} className="relative" style={{ height: trackHeight }}>
-      <div className="sticky top-0 h-screen overflow-clip">
+      <div className="sticky top-0 h-screen h-[100dvh] overflow-clip">
         {heading && (
           <div
             ref={headingRef}

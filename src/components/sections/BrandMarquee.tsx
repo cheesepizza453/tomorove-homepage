@@ -1,7 +1,7 @@
 "use client";
 
 import FadeIn from "@/components/motion/FadeIn";
-import { type PointerEvent as ReactPointerEvent, useEffect, useRef } from "react";
+import { type PointerEvent as ReactPointerEvent, useRef } from "react";
 
 const BRANDS = [
   { name: "DoDit", url: "https://dodit.kr", description: "여성들의 다이어트 파트너" },
@@ -13,6 +13,12 @@ const BRANDS = [
   { name: "MOYOKU", url: "https://moyoku.kr/", description: "일본 바디케어 루틴" },
   { name: "KIDZPLAN", url: "https://kidzplan.kr", description: "성장기 어린이들을 위한 영양계획" },
   { name: "Eli Korea", url: "https://elikorea.kr", description: "지중해식 식탁에서 시작된 식후 루틴" },
+  { name: "DEWORA", url: "https://dewora.kr", description: "사막에서 찾은 수분 저장의 힘" },
+  { name: "DR.BITE", url: "https://drbite.kr", description: "미국에서 생산된 고품질 구강 건강 브랜드" },
+  { name: "Livature", url: "https://livature.kr", description: "풍성함을 위한 유일한 선택지" },
+  { name: "Planlight", url: "https://planlight.co.kr", description: "가볍게 만드는 일에 집중합니다" },
+
+
 ];
 
 export default function BrandMarquee() {
@@ -26,21 +32,6 @@ export default function BrandMarquee() {
     startY: 0,
     startScrollLeft: 0,
   });
-
-  useEffect(() => {
-    const scroller = scrollerRef.current;
-    if (!scroller) return;
-
-    const handleWheel = (event: WheelEvent) => {
-      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-
-      event.preventDefault();
-      scroller.scrollLeft += event.deltaY;
-    };
-
-    scroller.addEventListener("wheel", handleWheel, { passive: false });
-    return () => scroller.removeEventListener("wheel", handleWheel);
-  }, []);
 
   const handlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     const scroller = scrollerRef.current;

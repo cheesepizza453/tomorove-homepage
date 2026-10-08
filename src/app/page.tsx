@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-1 flex-col">
-      <main className="relative flex flex-1 flex-col bg-[url('/images/home/main2.png')] bg-cover bg-center bg-no-repeat">
+    <div className="flex min-w-0 flex-1 flex-col">
+      <main className="relative flex flex-1 flex-col bg-[url('/images/home/main_mo.jpg')] sm:bg-[url('/images/home/main2.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-black/30" />
         <div className={'relative z-10 w-full min-h-screen flex justify-center items-center'}>
           <div className={'md:hidden text-[42px] leading-[1.2] font-semibold text-center text-white'}>
@@ -33,7 +33,7 @@ export default function HomePage() {
         <div>
         </div>
       </main>
-      <div className={'overflow-hidden w-[100vw]'}>
+      <div className="w-full min-w-0 overflow-hidden">
         <BrandMarquee />
       </div>
       <ScrollGrowCircle

@@ -18,7 +18,7 @@ export default function ScrollBlurReveal({
   imageSrc,
   trackHeight = "200vh",
   maxBlur = 28,
-  minBlur = 4,
+  minBlur = 0,
   overlayFrom = 1,
   overlayTo = 0.4,
 }: ScrollBlurRevealProps) {
@@ -37,7 +37,7 @@ export default function ScrollBlurReveal({
     ).matches;
 
     const applyProgress = (progress: number) => {
-      image.style.filter = `blur(${minBlur + (maxBlur - minBlur) * (1 - progress)}px)`;
+      image.style.filter = `blur(${minBlur + (maxBlur - minBlur) * progress}px)`;
       overlay.style.opacity = String(overlayFrom + (overlayTo - overlayFrom) * progress);
     };
 
@@ -75,8 +75,8 @@ export default function ScrollBlurReveal({
 
   return (
     <div ref={trackRef} className="relative" style={{ height: trackHeight }}>
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-black">
-        <div ref={imageRef} className="absolute inset-0" style={{ filter: `blur(${maxBlur}px)` }}>
+      <div className="sticky top-0 h-screen h-[100dvh] w-full overflow-hidden bg-black">
+        <div ref={imageRef} className="absolute inset-0" style={{ filter: `blur(${minBlur}px)` }}>
           <Image src={imageSrc} alt="" fill sizes="100vw" className="object-cover" />
         </div>
 
