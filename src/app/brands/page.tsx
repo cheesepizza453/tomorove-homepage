@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, type CSSProperties } from 'react'
+import FadeIn from '@/components/motion/FadeIn'
 import { brands } from '@/content/brands'
 
 const categories = ['ALL', 'KIDS', 'BEAUTY', 'WELLNESS', 'HEALTH'] as const
@@ -64,40 +65,42 @@ export default function BrandsPage() {
         </div>
       </div>
       <ul className="mx-auto mt-[40px] grid w-full max-w-[1440px] grid-cols-2 gap-3 px-4 sm:mt-[30px] sm:grid-cols-3 sm:gap-[50px] sm:px-5">
-        {visibleBrands.map(({ slug, backgroundColor }) => {
+        {visibleBrands.map(({ slug, backgroundColor }, index) => {
           const brand = brands.find((item) => item.slug === slug);
           if (!brand) return null;
 
           return (
-            <li key={slug} className="group">
-              <Link
-                href={`/brands/${slug}`}
-                aria-label={`${brand.name} 브랜드 보기`}
-                style={{ "--brand-card-background": backgroundColor } as CSSProperties}
-                className="relative flex h-[180px] flex-col items-center justify-center gap-5 overflow-hidden rounded-[6px] border border-[#efefef] bg-[var(--brand-card-background)] px-4 text-center transition-colors hover:bg-[#222] focus-visible:bg-[#222] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#222] sm:h-[250px] sm:px-8"
-              >
-                <Image
-                  src={brand.heroImage}
-                  alt=""
-                  fill
-                  sizes="(min-width: 640px) 33vw, 50vw"
-                  className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-20 group-focus-within:opacity-20"
-                />
-                <figure className="relative z-10 h-[30px] w-[90px] sm:h-[50px] sm:w-[150px]">
+            <li key={`${activeCategory}-${slug}`} className="group">
+              <FadeIn className="h-full" delay={index * 70}>
+                <Link
+                  href={`/brands/${slug}`}
+                  aria-label={`${brand.name} 브랜드 보기`}
+                  style={{ "--brand-card-background": backgroundColor } as CSSProperties}
+                  className="relative flex h-[180px] flex-col items-center justify-center gap-5 overflow-hidden rounded-[6px] border border-[#efefef] bg-[var(--brand-card-background)] px-4 text-center transition-colors hover:bg-[#222] focus-visible:bg-[#222] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#222] sm:h-[250px] sm:px-8"
+                >
                   <Image
-                    src={`/images/brands/black_${slug}.png`}
-                    alt={`${brand.name} 로고`}
-                    fill
-                    className="object-contain transition-opacity group-hover:opacity-0 group-focus-visible:opacity-0"
-                  />
-                  <Image
-                    src={`/images/brands/white_${slug}.png`}
+                    src={brand.heroImage}
                     alt=""
                     fill
-                    className="object-contain opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+                    sizes="(min-width: 640px) 33vw, 50vw"
+                    className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-20 group-focus-within:opacity-20"
                   />
-                </figure>
-              </Link>
+                  <figure className="relative z-10 h-[30px] w-[90px] sm:h-[50px] sm:w-[150px]">
+                    <Image
+                      src={`/images/brands/black_${slug}.png`}
+                      alt={`${brand.name} 로고`}
+                      fill
+                      className="object-contain transition-opacity group-hover:opacity-0 group-focus-visible:opacity-0"
+                    />
+                    <Image
+                      src={`/images/brands/white_${slug}.png`}
+                      alt=""
+                      fill
+                      className="object-contain opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+                    />
+                  </figure>
+                </Link>
+              </FadeIn>
             </li>
           );
         })}
