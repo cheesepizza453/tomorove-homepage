@@ -36,7 +36,7 @@ export default function BrandsPage() {
       {/* <BrandHeroSlider /> */}
       <div className='mx-auto w-full max-w-[1400px]'>
         <h1 className='mt-[56px] text-center text-[40px] font-extrabold text-[#222] sm:mt-[80px] sm:text-[60px]'>Brands</h1>
-        <p className='font-light text-center text-[#222] sm:text-[16px]'>다양한 일상의 고민에서 시작된 투모로브의 브랜드를 소개합니다.</p>
+        <p className='font-light text-center text-[#222] sm:text-[16px]'>다양한 일상의 고민에서 시작된 <br className='block sm:hidden'/>투모로브의 브랜드를 소개합니다.</p>
         <div
           role="tablist"
           aria-label="브랜드 카테고리"
@@ -52,7 +52,7 @@ export default function BrandsPage() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveCategory(category)}
-                className={`shrink-0 rounded-full border px-[10px] py-[10px] text-[14px] font-semibold transition-colors duration-300 sm:px-[20px] sm:text-[15px] ${
+                className={`shrink-0 rounded-full border px-[10px] py-[10px] text-[13px] font-semibold transition-colors duration-300 sm:px-[20px] sm:text-[15px] ${
                   isActive
                     ? 'border-[#222] bg-[#222] text-white'
                     : 'border-[#ddd] bg-white text-[#777] hover:border-[#222] hover:text-[#222]'
