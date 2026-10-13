@@ -58,15 +58,22 @@ export default async function BrandDetailPage({ params }: BrandDetailPageProps) 
       </div>
 
       <div className="mt-[120px] mx-auto max-w-[1000px] px-6 text-center sm:text-[18px]">
-        {brand.story.map((paragraph, i) => (
-          <p key={i}>{paragraph}</p>
-        ))}
+        <div className="sm:hidden">
+          {(brand.storyMo ?? brand.story).map((paragraph, i) => (
+            <p key={i} className="whitespace-pre-line text-[14px]">{paragraph}</p>
+          ))}
+        </div>
+        <div className="hidden sm:block">
+          {brand.story.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
       </div>
       <StoreLink
             href={brand.storeUrl}
             brandSlug={brand.slug}
             position="brand_detail"
-            className="mt-[80px] self-center inline-block bg-[#222] text-white px-8 py-3 text-center sm:text-[16px] transition-colors hover:bg-[#333] rounded-[6px]"
+            className="mt-[80px] self-center inline-block bg-[#222] text-white px-8 py-3 text-center text-[14px] sm:text-[16px] transition-colors hover:bg-[#333] rounded-[6px]"
           >
             브랜드 스토어 바로가기
       </StoreLink>
