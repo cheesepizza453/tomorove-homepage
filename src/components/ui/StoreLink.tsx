@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, useCallback } from "react";
+import { type MouseEvent, type ReactNode, useCallback } from "react";
 import { buildStoreLinkUrl } from "@/lib/utils";
 import { trackOutboundStoreClick } from "@/lib/analytics";
 
@@ -27,19 +27,23 @@ export default function StoreLink({
   children,
   className,
 }: StoreLinkProps) {
-  const finalHref = buildStoreLinkUrl(
-    href,
-    brandSlug,
-    typeof window !== "undefined" ? window.location.href : undefined,
-  );
+  // Keep the server and initial client markup identical. Parameters derived
+  // from the current browser URL are added only when the link is clicked.
+  const finalHref = buildStoreLinkUrl(href, brandSlug);
 
-  const handleClick = useCallback(() => {
+  const handleClick = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
+    event.currentTarget.href = buildStoreLinkUrl(
+      href,
+      brandSlug,
+      window.location.href,
+    );
+
     trackOutboundStoreClick({
       brand_slug: brandSlug,
       product_id: productId,
       position,
     });
-  }, [brandSlug, productId, position]);
+  }, [brandSlug, href, productId, position]);
 
   return (
     <a

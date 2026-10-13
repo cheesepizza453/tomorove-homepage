@@ -17,6 +17,7 @@ interface ScrollGrowCircleProps {
 // PHASE2_END ~ 1: 사진으로 페이드인 + 라운드 제거 + 화면 전체를 덮도록 확대
 const PHASE1_END = 0.3;
 const PHASE2_END = 0.6;
+const BACKGROUND_DARK_START = 0.72;
 const CIRCLE_FADE_END = 0.2;
 
 // heading이 사라지는 데 걸리는 진행도(0~REST_FADE_END). 다 사라진 뒤에는 원이
@@ -32,6 +33,7 @@ export default function ScrollGrowCircle({
   baseSize = 100,
 }: ScrollGrowCircleProps) {
   const trackRef = useRef<HTMLDivElement>(null);
+  const stickyRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -39,11 +41,12 @@ export default function ScrollGrowCircle({
 
   useEffect(() => {
     const track = trackRef.current;
+    const sticky = stickyRef.current;
     const circle = circleRef.current;
     const image = imageRef.current;
     const content = contentRef.current;
     const headingEl = headingRef.current;
-    if (!track || !circle || !image || !content) return;
+    if (!track || !sticky || !circle || !image || !content) return;
 
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -97,6 +100,7 @@ export default function ScrollGrowCircle({
     };
 
     if (prefersReducedMotion) {
+      sticky.style.backgroundColor = "#000";
       circle.style.opacity = "1";
       applyShape(1);
       applyOffsets(1);
@@ -115,6 +119,7 @@ export default function ScrollGrowCircle({
         scrollRange > 0 ? Math.min(Math.max(-rect.top / scrollRange, 0), 1) : 0;
 
       circle.style.opacity = String(Math.min(progress / CIRCLE_FADE_END, 1));
+      sticky.style.backgroundColor = progress >= BACKGROUND_DARK_START ? "#000" : "#fff";
       applyShape(progress);
 
       const headingProgress = Math.min(Math.max(progress / REST_FADE_END, 0), 1);
@@ -146,7 +151,10 @@ export default function ScrollGrowCircle({
 
   return (
     <div ref={trackRef} className="relative" style={{ height: trackHeight }}>
-      <div className="sticky top-0 h-screen h-[100dvh] overflow-clip">
+      <div
+        ref={stickyRef}
+        className="sticky top-0 h-screen h-[100dvh] overflow-clip bg-white transition-colors duration-300"
+      >
         {heading && (
           <div
             ref={headingRef}

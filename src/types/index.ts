@@ -13,7 +13,6 @@ export interface Brand {
   category: BrandCategory;
   tagline: string;
   story: string[];
-  /** 모바일 상세 페이지용 스토리. 문자열 안의 \n으로 줄바꿈 위치를 지정한다. */
   storyMo?: string[];
   heroImage: string;
   cardImage: string;
