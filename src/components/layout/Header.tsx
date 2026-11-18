@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full ${
+      className={`fixed top-0 left-0 z-50 w-full md:transition-[background-color,backdrop-filter] md:duration-500 md:ease-out ${
         isMenuOpen
           ? "bg-white"
           : isScrolled
@@ -48,7 +48,7 @@ export default function Header() {
             : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[65px] max-w-[1440px] items-center justify-between px-[20px]">
+      <div className="relative mx-auto flex h-[65px] max-w-[1440px] items-center justify-between px-[20px] md:h-[55px]">
         <Link href="/" className="text-lg font-bold" onClick={() => setIsMenuOpen(false)}>
           <Image src="/images/home/logo.png" alt="TOMOROVE" width={120} height={32} />
         </Link>
@@ -59,7 +59,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[16px] font-bold text-gray-700 transition-colors hover:text-gray-900"
+              className="text-[15px] font-medium text-gray-900 transition-colors hover:text-black"
             >
               {item.label}
             </Link>
@@ -69,7 +69,7 @@ export default function Header() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center md:hidden"
+          className="absolute right-5 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
           aria-expanded={isMenuOpen}
@@ -82,7 +82,11 @@ export default function Header() {
             stroke="currentColor"
           >
             {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 3.75l16.5 16.5m0-16.5-16.5 16.5"
+              />
             ) : (
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             )}

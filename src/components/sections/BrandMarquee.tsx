@@ -99,7 +99,7 @@ export default function BrandMarquee() {
     <section className="mt-[100px] md:mt-0 flex flex-col md:flex-row min-h-screen w-full items-start md:items-center overflow-hidden bg-white py-24">
       <div className="shrink-0 pl-[max(1.5rem,calc((100vw-1440px)/2))]">
         <FadeIn>
-          <p className="whitespace-nowrap text-[36px] font-bold leading-[1.3] sm:text-[44px] lg:text-[52px]">
+          <p className="whitespace-nowrap text-[34px] font-bold leading-[1.3] sm:text-[44px] lg:text-[52px]">
             고민이 다르면
             <br />
             브랜드도 달라야 하니까

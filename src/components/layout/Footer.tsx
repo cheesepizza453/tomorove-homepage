@@ -9,7 +9,7 @@ const NAV_ITEMS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#ebebeb] text-[#222]">
+    <footer className="bg-[#f9f9f9] text-[#222]">
       <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:pt-[50px] lg:pb-[30px]">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <Link
@@ -22,7 +22,7 @@ export default function Footer() {
               alt="TOMOROVE"
               width={2080}
               height={222}
-              className="h-auto w-[135px] sm:w-[175px]"
+              className="h-auto w-[135px] sm:w-[145px]"
             />
           </Link>
 
@@ -31,7 +31,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[16px] font-bold transition-opacity duration-200 hover:opacity-50 sm:text-[16px]"
+                className="text-[16px] font-bold transition-opacity duration-200 hover:opacity-50 sm:text-[15px]"
               >
                 {item.label}
               </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 text-[12px] leading-[1.85] sm:mt-14 sm:text-[13px]">
+        <div className="mt-12 text-[12px] leading-[1.85] sm:mt-14 sm:text-[12px]">
           <p>상호명 : 주식회사 투모로브 | 대표 : 성준</p>
           <p>
             사업자번호 : 868-81-03566 <span className="hidden sm:inline">|</span>

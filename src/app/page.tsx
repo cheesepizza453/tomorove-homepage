@@ -10,7 +10,7 @@ export default function HomePage() {
       <main className="relative flex flex-1 flex-col bg-[url('/images/home/main_mo.jpg')] sm:bg-[url('/images/home/main2.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-black/30" />
         <div className={'relative z-10 w-full min-h-screen flex justify-center items-center'}>
-          <div className={'md:hidden text-[42px] leading-[1.2] font-semibold text-center text-white'}>
+          <div className={'md:hidden text-[38px] leading-[1.2] font-semibold text-center text-white'}>
             <FadeIn>
               <p>오늘의 선택이</p>
             </FadeIn>
@@ -41,13 +41,13 @@ export default function HomePage() {
         heading={
           <>
           <FadeIn>
-            <p className={'md:hidden text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>TOMOROVE는</p>
+            <p className={'md:hidden text-[34px] md:text-[72px] leading-[1.2] font-semibold text-center'}>TOMOROVE는</p>
           </FadeIn>
           <FadeIn delay={300}>
-            <p className={'md:hidden text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>사람들의 일상을 바꾸는</p>
+            <p className={'md:hidden text-[34px] md:text-[72px] leading-[1.2] font-semibold text-center'}>사람들의 일상을 바꾸는</p>
           </FadeIn>
           <FadeIn delay={600}>
-            <p className={'md:hidden text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>브랜드 컴퍼니입니다.</p>
+            <p className={'md:hidden text-[34px] md:text-[72px] leading-[1.2] font-semibold text-center'}>브랜드 컴퍼니입니다.</p>
           </FadeIn>
           <FadeIn>
             <p className={'hidden md:block text-[36px] md:text-[72px] leading-[1.2] font-semibold text-center'}>TOMOROVE는 <br/>사람들의 일상을 바꾸는<br/>
@@ -69,7 +69,7 @@ export default function HomePage() {
       </ScrollGrowCircle>
       <ScrollBlurReveal imageSrc="/images/home/bg-3.png">
         <FadeIn>
-          <p className={'text-[42px] md:text-[72px] leading-[1.2] font-semibold text-center text-white'}>매일의 건강을<br/>
+          <p className={'text-[38px] md:text-[72px] leading-[1.2] font-semibold text-center text-white'}>매일의 건강을<br/>
             브랜드로 설계합니다.</p>
             <div className="flex justify-center mt-[30px] sm:mt-[50px]">
             <Link

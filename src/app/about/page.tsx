@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className={'mt-[60px] w-full flex-none md:mt-0 md:w-half md:flex-1'}>
           <FadeIn><h5 className={'font-bold text-[40px] md:text-[60px]'}>Brand-first</h5></FadeIn>
           <FadeIn delay={100}><p className={'font-bold text-[16px] md:text-[25px] leading-0'}>브랜드 우선</p></FadeIn>
-          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] mt-[40px] leading-[1.2]'}>단기 성과보다<br/>오래
+          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] sm:mt-[40px] mt-[20px] leading-[1.2]'}>단기 성과보다<br/>오래
             남는 브랜드를 우선합니다.</p>
           </FadeIn>
         </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
         <div className={'mt-[60px] md:mt-[180px] md:ml-[300px] md:w-half flex-1'}>
           <FadeIn><h5 className={'font-bold text-[40px] md:text-[60px]'}>Data-driven</h5></FadeIn>
           <FadeIn delay={100}><p className={'font-bold text-[16px] md:text-[25px] leading-0'}>데이터 기반</p></FadeIn>
-          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] mt-[40px] leading-[1.2]'}>감이 아닌 숫자로
+          <FadeIn delay={200}><p className={'font-bold text-[26px] md:text-[40px] sm:mt-[40px] mt-[20px] leading-[1.2]'}>감이 아닌 숫자로
             말하고,<br/>데이터로 결정합니다.</p>
           </FadeIn>
         </div>

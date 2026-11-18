@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     "172.30.1.6",
     "172.30.1.27",
     "172.30.1.44",
+    "172.30.1.76",
   ],
   images: {
     unoptimized: true,
